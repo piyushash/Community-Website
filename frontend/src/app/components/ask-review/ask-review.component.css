@@ -1,0 +1,12 @@
+.asset{
+    width: 3%;
+    height: 3%;
+    float: right;
+    margin-right: 5px;
+}
+
+.message{
+    border-top: 1.3px solid red;
+    border-bottom: 1.3px solid red;
+    background-color: rgba(255, 0, 0, 0.219);
+}

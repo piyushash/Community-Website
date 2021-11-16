@@ -1,0 +1,10 @@
+.post{
+    float: right;
+}
+
+.asset{
+    width: 3%;
+    height: 3%;
+    float: right;
+    padding-top: 1em;
+}

@@ -1,0 +1,46 @@
+<div class="mt-5 ms-2 pt-3">
+    <a routerLink="/searchresult"><img src="../../../assets/previous.png" alt="back" class="asset"></a>
+
+    <h3>Ask for review / Add product</h3>
+</div>
+<hr>
+
+<div class="message" *ngIf="error">
+    <p class="pt-2 ps-2">This Product already exists. So we're redirecting you to product review in 30sec...</p>
+</div>
+
+<div class="container mt-5">
+    <form (ngSubmit)="submit()" [formGroup]="addProduct">
+        <div class="form-group mt-3">
+            <label for="Product Name">Product Name</label>
+            <input type="text" formControlName="product_name" class="form-control" id="Product Name"
+                placeholder="Enter Product Name" [ngClass]="{'is-invalid' : submitted && f.product_name.errors}">
+
+            <div *ngIf="submitted && f.product_name.errors" class="invalid-feedback">
+                <div *ngIf="f.product_name.errors.required"> <i> Please enter the product name</i></div>
+            </div>
+        </div>
+
+        <div class="form-group mt-3">
+            <label for="Product brand">Product brand</label>
+            <input type="text" formControlName="brand" class="form-control" id="Product brand"
+                placeholder="Enter Product brand" [ngClass]="{'is-invalid' : submitted && f.brand.errors}">
+
+            <div *ngIf="submitted && f.brand.errors" class="invalid-feedback">
+                <div *ngIf="f.brand.errors.required"> <i> Please enter the product brand</i></div>
+            </div>
+        </div>
+        <div class="form-group mt-3">
+            <label for="Product Code">Product Code</label>
+            <input type="text" formControlName="code" class="form-control" id="Product Code"
+                placeholder="Enter Product Code" [ngClass]="{'is-invalid' : submitted && f.code.errors}">
+
+            <div *ngIf="submitted && f.code.errors" class="invalid-feedback">
+                <div *ngIf="f.code.errors.required"> <i> Please enter the product code</i></div>
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-dark rounded-pill mt-3">Submit</button>
+    </form>
+
+</div>

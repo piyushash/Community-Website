@@ -1,0 +1,23 @@
+<div class="container mt-5 pt-3">
+    <a routerLink="/searchresult"><img src="../../../assets/previous.png" alt="back" class="asset"></a>
+    <h2>{{data.product_name}}</h2>
+    <p><b>Brand</b>- {{data.brand}}</p>
+    <p><b>Code</b>- {{data.code}}</p>
+
+    <p> <i>Reviews:</i> 
+    <button routerLink="/postReview/{{data.id}}" class="post btn btn-sm btn-warning">Post Review</button>
+    </p>
+    
+
+    <div class="container" *ngFor="let rev of data.reviews">
+        <div class="card mb-3" *ngIf="rev.approval==true">
+            <div class="card-header">
+                <b>{{rev.heading}}</b>
+            </div>
+            <div class="container">
+                <p><b>Review:</b> {{rev.review}}</p>
+                <p><b>Rating:</b> {{rev.rating}}</p>
+            </div>
+        </div>
+    </div>
+</div>

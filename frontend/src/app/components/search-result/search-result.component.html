@@ -1,0 +1,72 @@
+<div class="background">
+    <div class="container pt-5 mt-4">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <form class="input-group search-bar" (ngSubmit)="search()" [formGroup]="searchForm">
+            <input formControlName="search" class="form-control border-end-0 border rounded-pill" type="text"
+                placeholder="Search" id="search">
+            <span class="input-group-append">
+                <button class="btn btn-outline-secondary border rounded-pill ms-n5">
+                    <i class="fa fa-search"></i>
+                </button>
+            </span>
+        </form>
+
+    </div>
+
+    <div class="result">
+        <div class="container mt-3 ms-5">
+            <div *ngIf="data.length==0">
+                <h3>No result found for query "{{query.search}}" ! </h3>
+            </div>
+        </div>
+
+        <div class="container">
+            <i *ngIf="data.length>0">
+                <h5>Search Results :</h5>
+            </i>
+            <div class="row">
+                <div class="col-sm-6 mb-3" *ngFor="let product of data">
+                    <div class="card border border-secondary">
+                        <div class="card-body">
+                            <h5 class="card-title">{{product.product_name}}</h5>
+                            <p class="card-text"><b>Product Brand</b>- {{product.brand}}</p>
+                            <p class="card-text"><b>Product Code</b>- {{product.code}}</p>
+
+                            <a routerLink="/show-more/{{product.id}}" class="btn btn-outline-dark">Show Details</a>
+                            <span class="avg"><i>Average rating:</i> {{calAvg(product)}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="sidenav">
+        <form (ngSubmit)="search2()" [formGroup]="filterForm">
+            <p id="fil"><b>Filter</b></p>
+            <div class="form-check">
+                <input formControlName="pdt_name" checked="true" type="checkbox" class="form-check-input" id="name">
+                <label class="form-check-label" for="name">Name</label>
+            </div>
+
+            <div class="form-check">
+                <input formControlName="pdt_brand" checked="true" type="checkbox" class="form-check-input" id="brand">
+                <label class="form-check-label" for="brand">brand</label>
+            </div>
+
+            <div class="form-check">
+                <input formControlName="pdt_code" checked="true" type="checkbox" class="form-check-input" id="code">
+                <label class="form-check-label" for="code">Code</label>
+            </div>
+
+            <button class="btn btn-sm btn-outline-warning mt-2">Filter</button>
+        </form>
+
+        <div>
+            <button class="btn btn-sm btn-warning add-pdt" routerLink="/ask-review">Add Product</button>
+        </div>
+    </div>
+</div>

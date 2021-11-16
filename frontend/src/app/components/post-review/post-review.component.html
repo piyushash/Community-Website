@@ -1,0 +1,51 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="mt-5 pt-3">
+  <a routerLink="/show-more/{{id}}"><img src="../../../assets/previous.png" alt="back" class="asset"></a>
+
+  <h4 class="ms-3">Add a Review </h4>
+  <hr>
+</div>
+<div class="container mt-3">
+  <form (ngSubmit)="reviewSubmit()" [formGroup]="reviewForm">
+    <div class="form-group">
+      <label for="heading"><h5>Review Heading</h5> </label>
+      <input type="text" formControlName="heading" class="form-control" id="heading" placeholder="Heading" [ngClass]="{'is-invalid' : submitted && f.heading.errors}">
+
+      <div *ngIf="submitted && f.heading.errors" class="invalid-feedback">
+        <div *ngIf= "f.heading.errors.required">Please fill heading field</div>
+      </div>
+    </div>
+
+    <div class="form-group mt-3">
+      <label for="review"><h5> Review</h5> </label>
+      <textarea class="form-control" formControlName="review" id="review" rows="5" [ngClass]="{'is-invalid' : submitted && f.review.errors}"></textarea>
+      
+      
+      <div *ngIf="submitted && f.review.errors" class="invalid-feedback">
+        <div *ngIf= "f.review.errors.required">Please fill review field</div>
+      </div>
+      <div *ngIf="submitted && f.review.errors" class="invalid-feedback">
+        <div *ngIf= "f.review.errors.minlength">Minimum character required is 20 </div>
+      </div>
+      <div *ngIf="submitted && f.review.errors" class="invalid-feedback">
+        <div *ngIf= "f.review.errors.maxlength">Maximum character allowed is 400 </div>
+      </div>
+   
+    </div>
+
+    <div class="container">
+    <div class="card row mt-3">
+      <i>Rating: {{selectedValue}}</i>
+      <div class="col-sm-12">
+        <ul class="list-inline rating-list" *ngFor="let star of stars" style="display: inline-block">
+          <li (click)="countStar(star)" [ngClass]="{'selected': (star <= selectedValue)}">
+            <i class="fa fa-star"></i>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+    <button type="submit" class="btn btn-dark rounded-pill mt-3">Submit</button>
+  </form>
+</div>

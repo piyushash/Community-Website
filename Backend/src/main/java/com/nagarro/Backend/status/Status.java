@@ -1,0 +1,13 @@
+package com.nagarro.Backend.status;
+
+public enum Status {
+    SUCCESS,
+    USER_ALREADY_EXISTS,
+    FAILURE,
+    CONFIRM_PASSWORD_MISMATCH,
+    REVIEW_ADDED,
+    PRODUCT_NOT_EXISTS,
+    PRODUCT_ALREADY_EXISTS,
+    ROLE_ADDED,
+    PRODUCT_ADDED;
+}

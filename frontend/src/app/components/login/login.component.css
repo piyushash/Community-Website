@@ -1,0 +1,14 @@
+a{
+    color: #707275;
+}
+.invalid{
+    color: red;
+}
+
+ 
+.asset{
+    width: 3%;
+    height: 3%;
+    float: right;
+    margin-right: 5px;
+  }

@@ -1,0 +1,50 @@
+.background{
+    min-height: 35.45rem;
+    background-image:url("https://innovatewebdevelopment.com/wp-content/uploads/2020/07/comingsoon.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: aliceblue;
+}
+.ms-n5 {
+    margin-left: -40px;
+}
+
+.info{
+    margin-top: 8rem;
+    float: right;
+}
+
+.search-bar{
+    max-width: 45%;
+    margin-left: 25%;
+    margin-right: 15%;
+}
+
+.search-div{
+    padding-top: 8%;
+}
+
+.stats{
+    padding-top: 5%;
+    padding-left: 30%;
+}
+
+.assets{
+    max-width: 50px;
+    max-height: 50px;
+}
+
+.col{
+    max-width:fit-content;
+}
+
+.num{
+    margin: 1em;
+    font-size: x-large;
+    font-weight: bold;
+    text-shadow: 2px 2px 8px rgb(255, 173, 228);
+}
+
+.S-head{
+    font-style: oblique;
+}

@@ -1,0 +1,52 @@
+<div class="background">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <div class="container">
+
+        <div class="info">
+            <h2> <b> THE COMMUNITY</b> </h2>
+            <p>
+                Find Solutions. Ask Questions. Share Ideas. <br> Connect with users across the world.
+            </p>
+        </div>
+
+        <div class="container stats row">
+            <div class="col">
+                <img src="../../../assets/teamwork.png" alt="Members" class="assets"><span class="num">
+                    {{stats[0]}}</span>
+                <span class="S-head">
+                    <p>Members</p>
+                </span>
+            </div>
+            <div class="col">
+                <img src="../../../assets/checklist.png" alt="product" class="assets"><span class="num">
+                    {{stats[1]}}</span>
+                <span class="S-head">
+                    <p>Products</p>
+                </span>
+            </div>
+            <div class="col">
+                <img src="../../../assets/messages.png" alt="review" class="assets"><span class="num">
+                    {{stats[2]}}</span>
+                <span class="S-head">
+                    <p>Reviews</p>
+                </span>
+            </div>
+
+        </div>
+
+        <div class="search-div" *ngIf="privacy()">
+            <form class="input-group search-bar" (ngSubmit)="search()" [formGroup]="searchForm">
+                <input formControlName="search" class="form-control border-end-0 border rounded-pill" type="text"
+                    placeholder="Search" id="search">
+                <span class="input-group-append">
+                    <button class="btn btn-outline-secondary border rounded-pill ms-n5">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </span>
+            </form>
+
+        </div>
+    </div>
+
+
+</div>

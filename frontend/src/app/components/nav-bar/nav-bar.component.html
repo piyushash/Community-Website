@@ -1,0 +1,35 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="/">Community</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav nav-left">
+        <li class="nav-item">
+
+          <div *ngIf="!service.currentUser">
+            <a class="nav-link active" aria-current="page" routerLink="login">Login/Register</a>
+
+          </div>
+          <a *ngIf="service.currentUser" class="nav-link active"
+            aria-current="page">Welcome {{service.currentUser.username}}</a>
+        </li>
+      </ul>
+    </div>
+    <div class="navbar-nav">
+      <ul class="navbar-nav mr-auto">
+        
+        <li class="nav-item" *ngIf="isAdmin()">
+          <a class="nav-link active" aria-current="page" routerLink="/admin">Admin Pannel</a>
+        </li>
+
+        <li class="nav-item" *ngIf="service.currentUser">
+          <a class="nav-link active" aria-current="page" routerLink="/" (click)="logout()"><u>Logout</u></a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>

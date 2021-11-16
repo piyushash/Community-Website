@@ -1,0 +1,34 @@
+a{
+    color: #707275;
+}
+
+.mid{
+    margin-left: 25%;
+}
+
+.float-right{
+    float: right;
+}
+
+.long{
+    max-width: 50%;
+}
+
+.small{
+    max-width: 25%;
+}
+
+.center-ele-btn{
+    margin-left: 20%;
+}
+.center-ele-p{
+    margin-left: 13%;
+}
+
+ 
+.asset{
+    width: 3%;
+    height: 3%;
+    float: right;
+    margin-right: 5px;
+  }

@@ -1,0 +1,64 @@
+.background{
+    background-image: url("https://wallpapersprinted.com/download/2/black_background_wood-wallpaper-2560x1600.jpg");
+    min-height: 33.99rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: aliceblue;
+}
+
+.ms-n5 {
+    margin-left: -40px;
+}
+
+.search-bar{
+    max-width: 45%;
+    margin-left: 30%;
+    margin-right: 15%;
+}
+
+.card{
+    background-color: rgba(66, 66, 66, 0.5);
+    color: aliceblue;
+}
+
+.border-secondary:hover{
+    border-color: #1d70c4 !important ;
+}
+
+.btn-outline-dark {
+    color: #f8f8f8;
+    border-color: #1d70c4;
+}
+
+.sidenav {
+    height: 100%;
+    width: 8%;
+    position: fixed;
+    z-index: 1; 
+    top: 3.50em;
+    left: 0;
+    background-color: #212529;
+    overflow-x:scroll;
+    padding-top: 2%;
+    padding-left: 1%;
+  }
+
+.result{
+    padding-top: 1%;
+    padding-left: 12%;
+    max-width: 90%;
+}
+
+#fil{
+    border-bottom: 1px solid gray;
+}
+
+.add-pdt{
+    position: fixed;
+    bottom: 7%;
+    margin-left: -0.7%;
+}
+
+.avg{
+    float:inline-end
+}
